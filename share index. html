@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Share Guide - Your Ultimate Stock Market Resource</title>
+<meta name="description" content="Share Guide - Trusted database, detailed analysis reports, PDF tools and insights to guide your stock market investing and trading decisions." />
+<meta name="keywords" content="share market, stock research, analysis reports, PDF tools, investment guides, trading strategies" />
+<meta name="author" content="Share Guide Team" />
+<style>
+  /* Reset and base */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #333; line-height: 1.6;}
+  a { text-decoration: none; color: #007bff; }
+  a:hover { color: #0056b3; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  header {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  nav {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #cbd5e1;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  nav a:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem 3rem;
+    border-radius: 0 0 80px 80px / 120px 120px 0 0;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .hero .btn-primary {
+    background-color: #facc15;
+    color: #1e293b;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 6px 10px rgba(250,204,21,0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .hero .btn-primary:hover {
+    background-color: #eab308;
+    box-shadow: 0 8px 14px rgba(234,179,8,0.7);
+  }
+
+  /* Features Section */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+  .feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(59,130,246,0.3);
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+  }
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: #1e3a8a;
+  }
+  .feature-description {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  /* Reports Section */
+  .reports {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+  .reports h2 {
+    color: #1e293b;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .report-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+  .report-item {
+    background: #f1f5f9;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .report-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #2563eb;
+  }
+  .report-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+  .report-link {
+    align-self: flex-start;
+    font-weight: 700;
+    color: #2563eb;
+  }
+
+  /* Footer */
+  footer {
+    background: #1e3a8a;
+    color: #cbd5e1;
+    padding: 1.8rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 740px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="container" role="banner">
+  <div class="logo" aria-label="Share Guide logo">Share Guide</div>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="#database">Database</a>
+    <a href="#reports">Analysis Reports</a>
+    <a href="#tools">PDF Tools</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" role="main">
+  <h1>Expert Share Market Guides & Powerful Tools</h1>
+  <p>Access dynamic databases, detailed PDF reports, and advanced analysis tools for your best trading decisions.</p>
+  <button class="btn-primary" onclick="document.getElementById('database').scrollIntoView({behavior:'smooth'})" aria-label="Explore Database Section">Explore Database</button>
+</section>
+
+<section id="database" class="container features" aria-label="Database Features">
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">📊</div>
+    <h3 class="feature-title">Extensive Share Database</h3>
+    <p class="feature-description">Curated live and historical data for thousands of stocks across multiple sectors, updated in real-time.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">📈</div>
+    <h3 class="feature-title">Dynamic Analysis Reports</h3>
+    <p class="feature-description">Downloadable and customizable PDF market trend and company health reports created by experts.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">🛠️</div>
+    <h3 class="feature-title">Powerful PDF Tools</h3>
+    <p class="feature-description">Easy-to-use tools to annotate, merge, and extract insights from share market PDFs and reports.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">⚡</div>
+    <h3 class="feature-title">Realtime Alerts & Trends</h3>
+    <p class="feature-description">Get notified instantly about market-moving events, breakout stocks, and investment ideas.</p>
+  </article>
+</section>
+
+<section id="reports" class="container reports" aria-label="Recent Analysis Reports">
+  <h2>Latest Market Analysis Reports</h2>
+  <div class="report-list">
+    <article class="report-item" tabindex="0" aria-labelledby="report1title">
+      <h3 id="report1title" class="report-title">Q2 2025 Sector-wise Outlook</h3>
+      <p class="report-desc">In-depth analysis of the best performing sectors and stocks for the upcoming quarter.</p>
+      <a href="#" class="report-link" aria-label="Download Q2 2025 Sector-wise Outlook Report PDF">Download PDF</a>
+    </article>
+    <article class="report-item" tabindex="0" aria-labelledby="report2title">
+      <h3 id="report2title" class="report-title">Bluechip Stock Performance Review</h3>
+      <p class="report-desc">Comprehensive performance evaluation and investment insights for India's leading bluechip stocks.</p>
+      <a href="#" class="report-link" aria-label="Download Bluechip Stock Performance Review PDF">Download PDF</a>
+    </article>
+    <article class="report-item" tabindex="0" aria-labelledby="report3title">
+      <h3 id="report3title" class="report-title">Intraday Trading Best Practices</h3>
+      <p class="report-desc">Key strategies and risk management guidelines for intraday traders looking for consistent profits.</p>
+      <a href="#" class="report-link" aria-label="Download Intraday Trading Best Practices PDF">Download PDF</a>
+    </article>
+    <article class="report-item" tabindex="0" aria-labelledby="report4title">
+      <h3 id="report4title" class="report-title">Sectoral Risk Analysis Report</h3>
+      <p class="report-desc">Identify risks and opportunities in emerging sectors backed by quantitative and qualitative data.</p>
+      <a href="#" class="report-link" aria-label="Download Sectoral Risk Analysis Report PDF">Download PDF</a>
+    </article>
+  </div>
+</section>
+
+<section id="tools" class="container features" aria-label="Market PDF Tools">
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">✍️</div>
+    <h3 class="feature-title">PDF Annotation Tool</h3>
+    <p class="feature-description">Mark-up key indicators and notes directly on downloaded reports for quick reference and sharing.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">🔗</div>
+    <h3 class="feature-title">Merge Multiple Reports</h3>
+    <p class="feature-description">Combine multiple PDF documents for comparative analysis and portfolio planning.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">🔍</div>
+    <h3 class="feature-title">Advanced Keyword Search</h3>
+    <p class="feature-description">Efficiently locate trends and specific data points across vast PDF databases.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">📁</div>
+    <h3 class="feature-title">Export & Share Reports</h3>
+    <p class="feature-description">Save annotated PDFs and share with clients or team members seamlessly.</p>
+  </article>
+</section>
+
+<footer role="contentinfo">
+  <div class="container">
+    <p>© 2025 Share Guide | All rights reserved.</p>
+    <p>Designed for speed, clarity & maximum user engagement.</p>
+  </div>
+</footer>
+
+</body>
+</html>
