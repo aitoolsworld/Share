@@ -1,2 +1,1 @@
-# Share
-Share market guidelines for new in share market. 
+# The ultimate Share market guidelines for all new share traders.
